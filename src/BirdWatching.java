@@ -54,7 +54,6 @@ public class BirdWatching {
                             String names = parts[0];
                             String translation = parts[1];
                             int observationBirds = 0;
-
                             for (String obs : observation) {
                                 if (obs.equals(names)) {
                                     observationBirds++;
