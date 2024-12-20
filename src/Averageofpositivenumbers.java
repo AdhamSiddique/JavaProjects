@@ -7,29 +7,25 @@ public class Averageofpositivenumbers {
         Scanner input = new Scanner(System.in);
 
         int total = 0;
-        int numberAdded = 0;
+        int positiveNumberAdded = 0;
 
         while (true) {
-
             int userInput = input.nextInt();
             if (userInput > 0) {
                 total++;
-                numberAdded += userInput;
+                positiveNumberAdded += userInput;
             }
 
-             if (userInput <= 0){
-                total++;
+            if (userInput == 0){
+                System.out.println((double) positiveNumberAdded / total);
+            } else {
+                System.out.println("Cannot calculate average");
             }
-
-             if (userInput == 0) {
-                 System.out.println((double) numberAdded % total);
-                 System.out.println(total);
-                 System.out.println(numberAdded);
-             }
-            }
-
-
         }
+
+
+
+    }
 
 
     }
