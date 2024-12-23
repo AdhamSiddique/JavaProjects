@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Averageofpositivenumbers {
@@ -5,29 +6,32 @@ public class Averageofpositivenumbers {
     public static void main(String[] args) {
         System.out.println("Average");
         Scanner input = new Scanner(System.in);
-
-        int total = 0;
-        int positiveNumberAdded = 0;
+        ArrayList<Integer> negativeNumbers = new ArrayList<>();
+        double total = 0;
+        double positiveNumberAdded = 0;
 
         while (true) {
             int userInput = input.nextInt();
             if (userInput > 0) {
                 total++;
                 positiveNumberAdded += userInput;
+            } else if (userInput == 0) {
+                break;
             }
 
-            if (userInput == 0){
-                System.out.println((double) positiveNumberAdded / total);
-            } else {
-                System.out.println("Cannot calculate average");
-            }
+
+
         }
 
+        double result = positiveNumberAdded / total;
+        System.out.println(result);
 
 
     }
 
 
-    }
+
+        }
+
 
 
