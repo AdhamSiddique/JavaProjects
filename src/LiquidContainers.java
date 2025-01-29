@@ -42,10 +42,9 @@ public class LiquidContainers {
                 }
             }
 
-                if (command.equals("move")) {
                     if (command.equals("move")) {
                         if (amount > 0) {
-                            firstVolume -= amount;
+                                firstVolume -= amount;
                         }
                         if (amount > 0) {
                             secondVolume += amount;
@@ -62,7 +61,7 @@ public class LiquidContainers {
 
 
         }
-    }
+
 
 
 
