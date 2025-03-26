@@ -1,15 +1,12 @@
 public class Book {
-
-    private int id;
     private String name;
+    private int publicationYear;
+    private String content;
 
-    public Book(int id, String name) {
-        this.id = id;
+    public Book(String name, int publicationYear, String content) {
         this.name = name;
-    }
-
-    public int getId() {
-        return id;
+        this.publicationYear = publicationYear;
+        this.content = content;
     }
 
     public String getName() {
@@ -18,9 +15,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "(id: " + id + "; name: " + name + ")";
+        return "Name: " + name + " (" + publicationYear + ")\nContents: " + content;
     }
-
-
-
 }

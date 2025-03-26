@@ -1,52 +1,39 @@
 public class SimpleDate {
     private int day;
     private int month;
-
     private int year;
 
-    public SimpleDate(int day, int month, int year){
+    // Constructor
+    public SimpleDate(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;
     }
 
-    public int getDay(){
-        return this.day;
-
-    }
-
-    public int getMonth() {
-        return this.month;
-    }
-
-    public int getYear() {
-        return this.year;
-
-    }
-
-    public boolean equals(Object compared) {
-        if (this == compared) {
+    // Basic equals method
+    public boolean equals(Object object) {
+        if (this == object){
             return true;
         }
 
-        if (!(compared instanceof SimpleDate)) {
+        if (!(object instanceof SimpleDate)){
             return false;
         }
 
-        SimpleDate otherData = (SimpleDate) compared;
+        SimpleDate otherDate = (SimpleDate) object;
 
-        if (this.day == otherData.day && this.month == otherData.month && this.year == otherData.year) {
-            return true;
+        return this.day == otherDate.day &&
+                this.month == otherDate.month &&
+                this.year == otherDate.year;
+        }
+
+        public int hashCode(){
+        return day * 10 * month * 300 * year * 43;
         }
 
 
-        return false;
     }
 
-        @Override
-        public String toString(){
-            return this.day + "." + this.month + "." + this.year;
-        }
 
-    }
+
 
